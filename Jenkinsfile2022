@@ -16,25 +16,25 @@ pipeline{
         
       stage('CheckOutCode'){
         steps{
-            sendslacknotifications("STARTED")
+            sendSlackNotifications("STARTED")
             git credentialsId: 'githubcredentials', url: 'https://github.com/rakhidevops1/maven-web-application-Jenkins.git'
     	}
       } //closing checkout
       stage('Build'){
         steps{
-            sendslacknotifications("BUILDINGWARPACKAGE")
+            sendSlackNotifications("BUILDINGWARPACKAGE")
              sh  "mvn clean package"
     	}
       } //closing Build
       stage('ExecuteSonarQubeReport'){
         steps{
-            sendslacknotifications("RUNNINGSONAR")
+            sendSlackNotifications("RUNNINGSONAR")
              sh  "mvn clean sonar:sonar"
     	}
       }//closing ExecuteSonarQubeReport
       stage('UploadArtifactsIntoNexus'){
         steps{
-            sendslacknotifications("UPLOADINGARTIFACTS")
+            sendSlackNotifications("UPLOADINGARTIFACTS")
              sh  "mvn clean deploy"
     	}
       }//closing UploadArtifactsIntoNexus
@@ -42,7 +42,7 @@ pipeline{
       steps{
           
         sshagent(['tomcatCredentialsForSCP']) {
-                  sendslacknotifications("DEPLOYINGTOTOMCAT") 
+                  sendSlackNotifications("DEPLOYINGTOTOMCAT") 
                    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.24.225:/opt/apache-tomcat-9.0.68/webapps/"  
                 }
       }
@@ -50,13 +50,13 @@ pipeline{
     }//stages closing
     post{
         aborted{
-            sendslacknotifications(currentBuild.result)
+            sendSlackNotifications(currentBuild.result)
         }
         success{
-            sendslacknotifications(currentBuild.result)
+            sendSlackNotifications(currentBuild.result)
         }
         failure{
-            sendslacknotifications(currentBuild.result)
+            sendSlackNotifications(currentBuild.result)
         }
     }
     
