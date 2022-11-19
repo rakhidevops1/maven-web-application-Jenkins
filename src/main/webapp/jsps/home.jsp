@@ -38,9 +38,9 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 		Hyderabad, Above ICICI Bank, Beside Meghana Foods,
 		Telangana,
 		+91-8978939293
-		rakhi.devops2@gmail.com
+		rakhi.devops1@gmail.com
 		<br>
-		<a href="mailto:rakhi.devops2@gmail.com">Mail to Rakesh Technologies</a>
+		<a href="mailto:rakhi.devops1@gmail.com">Mail to Rakesh Technologies</a>
 	</span>
 </div>
 <hr>
