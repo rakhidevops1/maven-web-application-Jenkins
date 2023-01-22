@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Rakesh Technologies Pvt Ltd.USA - Home Page</title>
+<title>Rakesh Technologies Pvt Ltd.INDIA - Home Page</title>
 <link href="images/technology.png" rel="icon">
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Rakesh Software Solutions. Hyderabad,Telangana</h1>
+<h1 align="center">Welcome to Rakesh Software Solutions. Ralleigh,North Caralina,USA</h1>
 <h1 align="center"> Rakesh Software Solutions- Very Good Training center for DevOps with AWS in Telangana,Hyderabad, India and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
 <hr>
 <br>
